@@ -1,0 +1,89 @@
+// ── Footer ───────────────────────────────────────────────────
+// Edit FOOTER_CONTENT to update contact info, nav links, and services list.
+
+const FOOTER_CONTENT = {
+  firmName: 'Dusseau & Makris',
+  tagline:  'Trusted CPA and accounting services for individuals and businesses.',
+
+  // TODO: Replace with real contact details
+  contact: {
+    phone:   '(555) 000-0000',
+    email:   'info@dusseaumakris.com',
+    address: '123 Main Street, Suite 100, Your City, State 00000',
+  },
+
+  quickLinks: [
+    { label: 'About',    href: '#about'    },
+    { label: 'Services', href: '#services' },
+    { label: 'Team',     href: '#team'     },
+    { label: 'Contact',  href: '#contact'  },
+  ],
+
+  services: [
+    'Tax Preparation',
+    'Bookkeeping',
+    'Payroll Support',
+    'Financial Reporting',
+    'Business Accounting',
+    'CPA Consulting',
+  ],
+}
+
+export default function Footer() {
+  const year = new Date().getFullYear()
+
+  return (
+    <footer className="footer">
+      <div className="container">
+
+        {/* ── Top grid ─────────────────────────────────────── */}
+        <div className="footer-top">
+
+          {/* Brand + tagline */}
+          <div className="footer-brand">
+            <h3>
+              {/* Split ampersand for accent color */}
+              Dusseau <span>&amp;</span> Makris
+            </h3>
+            <p>{FOOTER_CONTENT.tagline}</p>
+          </div>
+
+          {/* Quick links */}
+          <div className="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              {FOOTER_CONTENT.quickLinks.map(link => (
+                <li key={link.href}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services list */}
+          <div className="footer-col">
+            <h4>Services</h4>
+            <ul>
+              {FOOTER_CONTENT.services.map(svc => (
+                <li key={svc}>
+                  <span>{svc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* ── Bottom bar ───────────────────────────────────── */}
+        <div className="footer-bottom">
+          <p>© {year} {FOOTER_CONTENT.firmName}. All rights reserved.</p>
+          <p>
+            {/* TODO: Replace with real contact details */}
+            {FOOTER_CONTENT.contact.phone} &nbsp;·&nbsp; {FOOTER_CONTENT.contact.email}
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  )
+}

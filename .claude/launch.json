@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dusseau-makris",
+      "runtimeExecutable": "/Users/andrew.makris/.nvm/versions/node/v22.22.2/bin/node",
+      "runtimeArgs": ["/Users/andrew.makris/Documents/GitHub/React-JasonMakrisCPA/node_modules/.bin/vite"],
+      "env": {
+        "PATH": "/Users/andrew.makris/.nvm/versions/node/v22.22.2/bin:/usr/local/bin:/usr/bin:/bin"
+      },
+      "port": 5173,
+      "autoPort": true
+    }
+  ]
+}
