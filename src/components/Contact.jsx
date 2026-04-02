@@ -1,12 +1,22 @@
 import { useState } from 'react'
 
 // ── Contact details ───────────────────────────────────────────
-// Replace placeholder values with real business info when available.
 const CONTACT_INFO = {
-  phone:   '(555) 000-0000',          // TODO: Replace with real phone number
+  phone:   '(602) 996-8885',
   email:   'info@dusseaumakris.com',  // TODO: Replace with real email address
-  address: '123 Main Street, Suite 100\nYour City, State 00000', // TODO: Replace
+  address: '3519 E Shea Blvd #122\nPhoenix, AZ 85028',
 }
+
+// ── Office hours ──────────────────────────────────────────────
+const HOURS = [
+  { day: 'Monday',    hours: '8:00 AM – 4:00 PM' },
+  { day: 'Tuesday',   hours: '8:00 AM – 4:00 PM' },
+  { day: 'Wednesday', hours: '8:00 AM – 4:00 PM' },
+  { day: 'Thursday',  hours: '8:00 AM – 4:00 PM' },
+  { day: 'Friday',    hours: '8:00 AM – 4:00 PM' },
+  { day: 'Saturday',  hours: 'Closed'             },
+  { day: 'Sunday',    hours: 'Closed'             },
+]
 
 // ── Form subject options ──────────────────────────────────────
 const SUBJECT_OPTIONS = [
@@ -160,6 +170,25 @@ export default function Contact() {
                       {i < CONTACT_INFO.address.split('\n').length - 1 && <br />}
                     </span>
                   ))}
+                </div>
+              </div>
+
+              <div className="contact-detail-item">
+                <div className="detail-icon-box" aria-hidden="true">🕐</div>
+                <div className="detail-text">
+                  <div className="detail-label">Office Hours</div>
+                  <table className="hours-table">
+                    <tbody>
+                      {HOURS.map(({ day, hours }) => (
+                        <tr key={day}>
+                          <td className="hours-day">{day}</td>
+                          <td className={`hours-time${hours === 'Closed' ? ' closed' : ''}`}>
+                            {hours}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

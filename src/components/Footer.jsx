@@ -5,11 +5,10 @@ const FOOTER_CONTENT = {
   firmName: 'Dusseau & Makris',
   tagline:  'Trusted CPA and accounting services for individuals and businesses.',
 
-  // TODO: Replace with real contact details
   contact: {
-    phone:   '(555) 000-0000',
-    email:   'info@dusseaumakris.com',
-    address: '123 Main Street, Suite 100, Your City, State 00000',
+    phone:   '(602) 996-8885',
+    email:   'info@dusseaumakris.com',  // TODO: Replace with real email
+    address: '3519 E Shea Blvd #122, Phoenix, AZ 85028',
   },
 
   quickLinks: [

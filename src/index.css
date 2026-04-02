@@ -925,6 +925,157 @@ section.bg-alt { background-color: var(--bg-secondary); }
 
 
 /* ------------------------------------------------------------
+   12b. HOURS TABLE (inside Contact)
+   ------------------------------------------------------------ */
+
+.hours-table {
+  border-collapse: collapse;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-day {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 5px 12px 5px 0;
+  white-space: nowrap;
+  font-weight: 500;
+  width: 90px;
+}
+
+.hours-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 5px 0;
+}
+
+.hours-time.closed {
+  color: var(--text-muted);
+}
+
+
+/* ------------------------------------------------------------
+   12c. REVIEWS
+   ------------------------------------------------------------ */
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.reviews-score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.reviews-summary-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.1rem;
+  color: var(--border);
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+
+.reviews-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--bg-card);
+  border: var(--card-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.review-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.review-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Responsive — reviews */
+@media (max-width: 640px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ------------------------------------------------------------
    13. FOOTER
    ------------------------------------------------------------ */
 
